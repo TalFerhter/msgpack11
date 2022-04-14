@@ -650,7 +650,7 @@ class MsgPackExtension final : public Value<MsgPack::EXTENSION, MsgPack::extensi
     const MsgPack::extension &extension_items() const override { return m_value; }
 public:
     explicit MsgPackExtension(const MsgPack::extension &value) : Value(value) {}
-    explicit MsgPackExtension(MsgPack::extension &&value)      : Value(move(value)) {}
+    explicit MsgPackExtension(MsgPack::extension &&value)      : Value(std::move(value)) {}
 };
 
 class MsgPackNull final : public Value<MsgPack::NUL, NullStruct> {
