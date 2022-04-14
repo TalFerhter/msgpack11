@@ -667,7 +667,7 @@ struct Statics {
     const std::shared_ptr<MsgPackValue> f = std::make_shared<MsgPackBoolean>(false);
     const std::string empty_string;
     const std::vector<MsgPack> empty_vector;
-    const stsd::map<MsgPack, MsgPack> empty_map;
+    const std::map<MsgPack, MsgPack> empty_map;
     const MsgPack::binary empty_binary;
     const MsgPack::extension empty_extension;
     Statics() {}
